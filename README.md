@@ -12,3 +12,9 @@ Same as the apptainer-llama with a GPU, but uses '/tmp' to cache the files neede
 
 ## apptainer-tensorflow-jupyter 
 Tensorflow example using jupyter notebook with a GPU. This one is a little more involved, and if your training stage requires a long time to run, it is recommended you don't use jupyter notebook.
+
+## I ran out of storage!
+Please try to run:
+```
+apptainer cache clean
+```
