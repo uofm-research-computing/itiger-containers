@@ -49,7 +49,10 @@ Take the localhost url you received from the 'slurm-####.out' file and put it in
 
 ## Citations/Data sets
 [Tensorflow container on dockerhub](https://hub.docker.com/r/tensorflow/tensorflow)
+
 [Tensorflow image classification example](https://www.tensorflow.org/tutorials/images/classification)
+
 [Singularity/Apptainer GPU flag](https://apptainer.org/docs/user/1.0/gpu.html)
+
 [Singularity/Apptainer build guide](https://apptainer.org/docs/user/1.0/build_a_container.html)
 

@@ -33,10 +33,16 @@ The /tmp directory is created when a job is submitted. The directory itself come
 
 ## Citations/Data sets
 [How to guide for docker](https://ralph.blog.imixs.com/2024/03/19/how-to-run-llms-in-a-docker-container/)
+
 [Data set for model](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF)
+
 [Dockerhub cuda images](https://hub.docker.com/r/nvidia/cuda)
+
 [Dockerhub ubuntu images](https://hub.docker.com/_/ubuntu/)
+
 [Singularity/Apptainer GPU flag](https://apptainer.org/docs/user/1.0/gpu.html)
+
 [Singularity/Apptainer build guide](https://apptainer.org/docs/user/1.0/build_a_container.html)
+
 [Singluarity/Apptainer bind guide](https://apptainer.org/docs/user/main/bind_paths_and_mounts.html)
 
