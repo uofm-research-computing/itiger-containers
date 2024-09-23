@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: ubuntu:jammy
+
+%post
+    apt autoremove
+    apt clean
+    apt-get -y update
+    apt install -y build-essential
+    apt-get install -y git autotools-dev autoconf automake cmake libtool liblapack-dev libatlas-cpp-0.6-dev libnlopt-cxx-dev python3 python3-pip
+    pip3 install llama-cpp-python
+
+%environment
+    export LC_ALL=C
+    export PATH=/usr/games:$PATH
+
+%runscript
+    python3 test.py

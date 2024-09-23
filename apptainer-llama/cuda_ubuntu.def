@@ -1,0 +1,20 @@
+Bootstrap: docker
+From: nvidia/cuda:12.5.0-devel-ubuntu22.04
+
+%post
+    apt-get update 
+    apt-get upgrade -y 
+    apt-get install -y git build-essential python3 python3-pip gcc wget ocl-icd-opencl-dev opencl-headers clinfo libclblast-dev libopenblas-dev 
+    mkdir -p /etc/OpenCL/vendors 
+    echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd
+    python3 -m pip install --upgrade pip pytest cmake scikit-build setuptools fastapi uvicorn sse-starlette pydantic-settings starlette-context
+    CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
+
+%environment
+    export LC_ALL=C
+    export PATH=/usr/games:$PATH
+    export CUDA_DOCKER_ARCH=all
+    export GGML_CUDA=1
+
+%runscript
+    python3 test.py
