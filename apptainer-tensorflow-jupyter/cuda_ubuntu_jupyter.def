@@ -5,13 +5,7 @@ Bootstrap: docker
 # Cannot download or open a file retrieved from web
 #From: tensorflow/tensorflow:nightly-gpu-jupyter
 
-
 From: tensorflow/tensorflow:2.16.2-gpu-jupyter
-
-
-
-# %environment
-#     export TF_CPP_MIN_LOG_LEVEL=3
 
 %runscript
      echo "Starting notebook..."
