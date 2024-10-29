@@ -9,9 +9,9 @@ wget -P /tmp/ https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/
 
 # Execute the GPU container and bind the /tmp directory to /tmp inside the container.
 # Also, note that the working directory is also exported by default. 
-singularity run --bind /tmp:/tmp --nv cuda_ubuntu.sif 
+singularity run --bind /tmp:/tmp --bind /project:/project --nv cuda_ubuntu.sif 
 
 # An equivalent to the above is:
-# singularity exec --bind /tmp:/tmp --nv cuda_ubuntu.sif python3 ./test.py
+# singularity exec --bind /tmp:/tmp --bind /project:/project --nv cuda_ubuntu.sif python3 ./test.py
 
 #No cleanup necessary since /tmp is cleared each time a job is run
