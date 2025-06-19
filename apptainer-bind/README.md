@@ -57,7 +57,7 @@ From: nvidia/cuda:12.5.0-devel-ubuntu22.04
 
 Then, rebuild with `singularity build cuda_ubuntu.sif cuda_ubuntu.def`, and submit the job with the modified python environment.
 
-If you need to run the python shell or use it on the login node, they can just execute:
+If you need to run the python shell or use it on the login node, then you can just execute:
 ```
 singularity exec --bind /tmp:/tmp --bind /project:/project --nv cuda_ubuntu.sif python3 ./test.py
 ```
